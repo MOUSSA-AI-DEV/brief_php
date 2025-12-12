@@ -49,4 +49,19 @@ switch($action)
             include "../views/patients/edit.php"
 }           
 
+ case "delete":
+        if (!isset($_GET['id'])) {
+            die("manque id .");
+        }
+
+        deletePatient($conn, $_GET['id']);
+
+        header("Location: patients.php?action=list");
+        exit;
+        break;
+
+        
+         default:
+        echo "Action inconnue.";
+        break;
 ?>
