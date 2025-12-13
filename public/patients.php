@@ -1,67 +1,79 @@
-<?php 
-require_once "../config/config.php"
-require_once "../models/patientModel/Model.php"
+<?php
+require_once "../config/database.php";
+require_once "../config/config.php";
+require_once "../models/patientModel.php";
 
-$action=$GET['action']?? 'list';
-switch($action)
-{
+$action = $_GET['action'] ?? 'list';
+
+switch ($action) {
+
     case "list":
-    $patients=getAllPatients($connection)
-    include "../views/patients/list.php"
-    break;
-
-    case "add":
-        include "../views/patients/add.php"
+        $patients = afficherAllPatient($connection);
+        include "../views/patients/afficher.php";
         break;
 
-        case "insert":
-            if ($_SERVER["REQUEST_METHODE"]==='POST')
-            {
-                $first_n   =$_post['first_n']
-                $last_n   =$_post['last_n']
-                $gender   =$_post['gender']
-                $date_of_birth   =$_post['date_of_birth']
-                $phone_number   =$_post['phone_number']
-                $email   =$_post['email']
-                $adress   =$_post['adress']
-               insertPatient(
+    case "add":
+        include "../views/patients/ajouter.php";
+        break;
+
+    case "insert":
+        if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+
+            insertPatient(
                 $connection,
-                 $first_n,
-                $last_n,
-                $gender,
-                $date_of_birth,
-                $phone_number,
-                $email,
-                $adress
-               );
-               header("location:patients.php?action=list")
-               exit;
-            }
-            break;
-            case "edit"
-            if(!isset($_GET['id']))
-            {
-                die(" manque id ")
+                $_POST['first_name'],
+                $_POST['last_name'],
+                $_POST['gender'],
+                $_POST['date_of_birth'],
+                $_POST['phone_number'],
+                $_POST['email'],
+                $_POST['address']
+            );
 
-            }
-            $id=$_GET['id'];
-            $patient=getPatientbyId($connection,$id)
-            include "../views/patients/edit.php"
-}           
+            header("Location: patients.php?action=list");
+            exit;
+        }
+        break;
 
- case "delete":
+    case "edit":
         if (!isset($_GET['id'])) {
-            die("manque id .");
+            die("Manque id");
         }
 
-        deletePatient($conn, $_GET['id']);
+        $id = $_GET['id'];
+        $patient = getPatientbyId($connection, $id);
+        include "../views/patients/edit.php";
+        break;
+
+    case "update":
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+   updatePatient(
+    $connection,
+    $_POST['patient_id'],
+    $_POST['first_name'],
+    $_POST['last_name'],
+    $_POST['gender'],
+    $_POST['date_of_birth'],
+    $_POST['phone_number'],
+    $_POST['email'],
+    $_POST['address']
+);
+
+        }
 
         header("Location: patients.php?action=list");
         exit;
-        break;
 
-        
-         default:
+    case "delete":
+        if (!isset($_GET['id'])) {
+            die("Manque id");
+        }
+
+        deletePatients($connection, $_GET['id']);
+        header("Location: patients.php?action=list");
+        exit;
+
+    default:
         echo "Action inconnue.";
         break;
-?>
+}
