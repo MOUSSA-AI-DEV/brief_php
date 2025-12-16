@@ -54,14 +54,4 @@ function updateDepartement(
  
 
 
-  function deleteDepartement($connection,$id)
-  {
-    $sql="DELETE FROM departments WHERE department_id=?";
-    $stmt =mysqli_prepare($connection,$sql);
-    mysqli_stmt_bind_param($stmt,"i",$id);
-    return mysqli_stmt_execute($stmt);
-  }
-
-
-
-?>
+  
