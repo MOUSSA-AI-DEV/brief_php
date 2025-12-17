@@ -31,7 +31,7 @@
             <td>
                 <a href="patients.php?action=edit&id=<?=$row['patient_id'] ?>">Modifier</a> |
                 <a href="patients.php?action=delete&id=<?= $row['patient_id'] ?>" 
-                   onclick="return confirm('Supprimer ce patient ?')">Supprimer</a>
+                   >Supprimer</a>
             </td>
         </tr>
     <?php endwhile; ?>
