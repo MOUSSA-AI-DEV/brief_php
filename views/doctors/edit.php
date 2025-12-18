@@ -24,10 +24,8 @@
 
     <form method="POST" action="doctors.php?action=update" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
 
-        <!-- Hidden Doctor ID -->
         <input type="hidden" name="doctor_id" value="<?= htmlspecialchars($doctor['doctor_id']) ?>">
 
-        <!-- First Name -->
         <div>
             <label for="first_name" class="block text-gray-700 font-medium mb-2">First Name</label>
             <input type="text" name="first_name" id="first_name"
@@ -35,7 +33,6 @@
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
         </div>
 
-        <!-- Last Name -->
         <div>
             <label for="last_name" class="block text-gray-700 font-medium mb-2">Last Name</label>
             <input type="text" name="last_name" id="last_name"
@@ -43,7 +40,6 @@
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
         </div>
 
-        <!-- Specialization -->
         <div>
             <label for="specialization" class="block text-gray-700 font-medium mb-2">Specialization</label>
             <input type="text" name="specialization" id="specialization"
@@ -51,7 +47,6 @@
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
         </div>
 
-        <!-- Phone Number -->
         <div>
             <label for="phone_number" class="block text-gray-700 font-medium mb-2">Phone Number</label>
             <input type="text" name="phone_number" id="phone_number"
@@ -59,7 +54,6 @@
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Email -->
         <div>
             <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
             <input type="email" name="email" id="email"
@@ -67,7 +61,6 @@
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Department -->
         <div>
             <label for="department_id" class="block text-gray-700 font-medium mb-2">Department</label>
             <select name="department_id" id="department_id"
@@ -82,7 +75,6 @@
             </select>
         </div>
 
-        <!-- Submit Button -->
         <div class="text-right">
             <button type="submit" class="bg-yellow-500 text-white font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">
                 Update

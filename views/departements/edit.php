@@ -22,10 +22,8 @@
     <h2 class="text-2xl font-bold mb-6">Modifier un Département</h2>
 
     <form action="departements.php?action=update" method="POST" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
-        <!-- Hidden ID -->
         <input type="hidden" name="department_id" value="<?= htmlspecialchars($departements['department_id']) ?>">
 
-        <!-- Department Name -->
         <div>
             <label for="department_name" class="block text-gray-700 font-medium mb-2">Nom du Département</label>
             <input type="text" name="department_name" id="department_name"
@@ -34,7 +32,6 @@
                    required>
         </div>
 
-        <!-- Location -->
         <div>
             <label for="location" class="block text-gray-700 font-medium mb-2">Localisation</label>
             <input type="text" name="location" id="location"
@@ -43,7 +40,6 @@
                    required>
         </div>
 
-        <!-- Submit Button -->
         <div class="text-right">
             <button type="submit" class="bg-yellow-500 text-white font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">
                 Mettre à jour

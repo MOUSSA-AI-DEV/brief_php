@@ -8,7 +8,6 @@
 </head>
 <body class="bg-gray-100">
 
-<!-- Header avec navigation -->
 <header class="bg-blue-600 text-white shadow-md">
     <div class="container mx-auto flex justify-between items-center p-4">
         <div class="text-2xl font-bold">Health Care</div>
@@ -22,16 +21,14 @@
     </div>
 </header>
 
-<!-- Contenu principal -->
 <main class="container mx-auto mt-6 p-4">
 
-    <!-- Titre + bouton Ajouter -->
+    <!-- bouton Ajouter -->
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold">Liste des départements</h2>
         <a href="departements.php?action=add" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Ajouter un Département</a>
     </div>
 
-    <!-- Tableau des départements -->
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
             <thead class="bg-gray-200">
@@ -58,7 +55,6 @@
 
 </main>
 
-<!-- Footer -->
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
     &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
 </footer>

@@ -25,21 +25,18 @@
 
     <form action="patients.php?action=insert" method="POST" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
 
-        <!-- Prénom -->
         <div>
             <label for="first_name" class="block text-gray-700 font-medium mb-2">Prénom</label>
             <input type="text" name="first_name" id="first_name" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Nom -->
         <div>
             <label for="last_name" class="block text-gray-700 font-medium mb-2">Nom</label>
             <input type="text" name="last_name" id="last_name" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Sexe -->
         <div>
             <label for="gender" class="block text-gray-700 font-medium mb-2">Sexe</label>
             <select name="gender" id="gender" required
@@ -50,35 +47,30 @@
             </select>
         </div>
 
-        <!-- Date de Naissance -->
         <div>
             <label for="date_of_birth" class="block text-gray-700 font-medium mb-2">Date de Naissance</label>
             <input type="date" name="date_of_birth" id="date_of_birth" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Téléphone -->
         <div>
             <label for="phone_number" class="block text-gray-700 font-medium mb-2">Téléphone</label>
             <input type="text" name="phone_number" id="phone_number" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Email -->
         <div>
             <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
             <input type="email" name="email" id="email" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Adresse -->
         <div>
             <label for="address" class="block text-gray-700 font-medium mb-2">Adresse</label>
             <input type="text" name="address" id="address" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
 
-        <!-- Submit Button -->
         <div class="text-right">
             <button type="submit" class="bg-green-600 text-white font-semibold px-6 py-2 rounded hover:bg-green-700 transition">
                 Ajouter
