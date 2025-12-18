@@ -1,36 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un Patient</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
 
-<h2>Ajouter un Patient</h2>
+<header class="bg-blue-600 text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-2xl font-bold">Health Care</div>
+        <nav class="space-x-4">
+            <a href="index.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Dashboard</a>
+            <a href="patients.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Patients</a>
+            <a href="doctors.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Doctors</a>
+            <a href="departements.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Departments</a>
+        </nav>
+    </div>
+</header>
 
-<form action="patients.php?action=insert" method="POST">
+<main class="container mx-auto mt-6 p-4">
+    <h2 class="text-2xl font-bold mb-6">Ajouter un Patient</h2>
 
-    <label>Prénom :</label>
-    <input type="text" name="first_name" required><br><br>
+    <form action="patients.php?action=insert" method="POST" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
 
-    <label>Nom :</label>
-    <input type="text" name="last_name" required><br><br>
+        <!-- Prénom -->
+        <div>
+            <label for="first_name" class="block text-gray-700 font-medium mb-2">Prénom</label>
+            <input type="text" name="first_name" id="first_name" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-    <label>Sexe :</label>
-    <select name="gender" required>
-        <option value="Male">Homme</option>
-        <option value="Female">Femme</option>
-        <option value="Other">Autre</option>
-    </select><br><br>
+        <!-- Nom -->
+        <div>
+            <label for="last_name" class="block text-gray-700 font-medium mb-2">Nom</label>
+            <input type="text" name="last_name" id="last_name" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-    <label>Date de Naissance :</label>
-    <input type="date" name="date_of_birth" required><br><br>
+        <!-- Sexe -->
+        <div>
+            <label for="gender" class="block text-gray-700 font-medium mb-2">Sexe</label>
+            <select name="gender" id="gender" required
+                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option value="Male">Homme</option>
+                <option value="Female">Femme</option>
+                <option value="Other">Autre</option>
+            </select>
+        </div>
 
-    <label>Téléphone :</label>
-    <input type="text" name="phone_number" required><br><br>
+        <!-- Date de Naissance -->
+        <div>
+            <label for="date_of_birth" class="block text-gray-700 font-medium mb-2">Date de Naissance</label>
+            <input type="date" name="date_of_birth" id="date_of_birth" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-    <label>Email :</label>
-    <input type="email" name="email" required><br><br>
+        <!-- Téléphone -->
+        <div>
+            <label for="phone_number" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+            <input type="text" name="phone_number" id="phone_number" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-    <label>Adresse :</label>
-    <input type="text" name="address" required><br><br>
+        <!-- Email -->
+        <div>
+            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+            <input type="email" name="email" id="email" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-    <button type="submit">Ajouter</button>
-</form>
+        <!-- Adresse -->
+        <div>
+            <label for="address" class="block text-gray-700 font-medium mb-2">Adresse</label>
+            <input type="text" name="address" id="address" required
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
 
-<br>
-<a href="patients.php?action=list">Retour à la liste</a>
+        <!-- Submit Button -->
+        <div class="text-right">
+            <button type="submit" class="bg-green-600 text-white font-semibold px-6 py-2 rounded hover:bg-green-700 transition">
+                Ajouter
+            </button>
+        </div>
 
+    </form>
+
+    <div class="mt-4 text-center">
+        <a href="patients.php?action=list" class="text-blue-600 hover:underline">Retour à la liste</a>
+    </div>
+</main>
+
+<footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
+    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+</footer>
+
+</body>
+</html>

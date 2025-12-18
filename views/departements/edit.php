@@ -1,23 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier un Département</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
 
-<h2>Modifier un deparetements</h2>
+<header class="bg-blue-600 text-white shadow-md">
+    <div class="container mx-auto flex justify-between items-center p-4">
+        <div class="text-2xl font-bold">Health Care</div>
+        <nav class="space-x-4">
+            <a href="index.php" class="hover:bg-blue-700 px-3 py-2 rounded transition">Dashboard</a>
+            <a href="departements.php?action=list" class="hover:bg-blue-700 px-3 py-2 rounded transition">Departments</a>
+        </nav>
+    </div>
+</header>
 
- <form action="departements.php?action=update" method="POST">
+<main class="container mx-auto mt-6 p-4">
+    <h2 class="text-2xl font-bold mb-6">Modifier un Département</h2>
 
-    <input type="hidden" name="department_id" value="<?= $departements['department_id'] ?>">
+    <form action="departements.php?action=update" method="POST" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
+        <!-- Hidden ID -->
+        <input type="hidden" name="department_id" value="<?= htmlspecialchars($departements['department_id']) ?>">
 
-    <label>deparetement_name :</label>
-    <input type="text" name="department_name" value="<?= $departements['department_name'] ?>" required><br><br>
+        <!-- Department Name -->
+        <div>
+            <label for="department_name" class="block text-gray-700 font-medium mb-2">Nom du Département</label>
+            <input type="text" name="department_name" id="department_name"
+                   value="<?= htmlspecialchars($departements['department_name']) ?>"
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   required>
+        </div>
 
-    <label>location :</label>
-    <input type="text" name="location" value="<?= $departements['location'] ?>" required><br><br>
+        <!-- Location -->
+        <div>
+            <label for="location" class="block text-gray-700 font-medium mb-2">Localisation</label>
+            <input type="text" name="location" id="location"
+                   value="<?= htmlspecialchars($departements['location']) ?>"
+                   class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                   required>
+        </div>
 
-   <br><br>
+        <!-- Submit Button -->
+        <div class="text-right">
+            <button type="submit" class="bg-yellow-500 text-white font-semibold px-6 py-2 rounded hover:bg-yellow-600 transition">
+                Mettre à jour
+            </button>
+        </div>
+    </form>
 
-   
+    <div class="mt-4 text-center">
+        <a href="departements.php?action=list" class="text-blue-600 hover:underline">Retour à la liste</a>
+    </div>
+</main>
 
-    <button type="submit">Mettre à jour</button>
-</form>
+<footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
+    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+</footer>
 
-<br>
-<a href="departements.php?action=list">Retour à la liste</a>
-
+</body>
+</html>
