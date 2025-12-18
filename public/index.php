@@ -1,9 +1,7 @@
 <?php
-// public/index.php
 require_once "../config/database.php";
 require_once "../models/statisticsModel.php";
 
-// Statistics
 $totalPatients    = countPatients($connection);
 $totalDoctors     = countDoctors($connection);
 $totalDepartments = countDepartments($connection);
