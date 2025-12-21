@@ -23,7 +23,7 @@
 
     <form action="departements.php?action=insert" method="POST" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
         <div>
-            <label for="department_name" class="block text-gray-700 font-medium mb-2">Nom du Département</label>
+            <label for="department_name" class="block text-gray-700 font-medium mb-2">Nom du Departement</label>
             <input type="text" name="department_name" id="department_name"
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
                    placeholder="Ex: Cardiologie" required>
@@ -44,12 +44,12 @@
     </form>
 
     <div class="mt-4 text-center">
-        <a href="departements.php?action=list" class="text-blue-600 hover:underline">Retour à la liste</a>
+        <a href="departements.php?action=list" class="text-blue-600 hover:underline">Retour a la liste</a>
     </div>
 </main>
 
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
-    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+    &copy; <?= date('Y') ?> Health Care. Tous droits reserves.
 </footer>
 
 </body>

@@ -26,14 +26,14 @@
     <!-- bouton Ajouter -->
     <div class="flex justify-between items-center mb-6">
         <h2 class="text-2xl font-bold">Liste des départements</h2>
-        <a href="departements.php?action=add" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Ajouter un Département</a>
+        <a href="departements.php?action=add" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Ajouter un Departement</a>
     </div>
 
     <div class="overflow-x-auto">
         <table class="min-w-full bg-white shadow-md rounded-lg overflow-hidden">
             <thead class="bg-gray-200">
                 <tr>
-                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Nom du Département</th>
+                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Nom du Departement</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Localisation</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Actions</th>
                 </tr>
@@ -56,7 +56,7 @@
 </main>
 
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
-    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+    &copy; <?= date('Y') ?> Health Care. Tous droits reserves.
 </footer>
 
 </body>

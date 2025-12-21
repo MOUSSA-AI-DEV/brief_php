@@ -35,7 +35,7 @@
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Nom</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Sexe</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Date de Naissance</th>
-                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Téléphone</th>
+                    <th class="px-6 py-3 text-left font-semibold text-gray-700">Telephone</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Email</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Adresse</th>
                     <th class="px-6 py-3 text-left font-semibold text-gray-700">Actions</th>
@@ -64,7 +64,7 @@
 </main>
 
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
-    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+    &copy; <?= date('Y') ?> Health Care. Tous droits reserves.
 </footer>
 
 </body>

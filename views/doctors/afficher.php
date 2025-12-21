@@ -57,7 +57,7 @@
 </main>
 
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
-    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+    &copy; <?= date('Y') ?> Health Care. Tous droits reserves.
 </footer>
 
 </body>

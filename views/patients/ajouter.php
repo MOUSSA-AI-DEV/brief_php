@@ -54,7 +54,7 @@
         </div>
 
         <div>
-            <label for="phone_number" class="block text-gray-700 font-medium mb-2">Téléphone</label>
+            <label for="phone_number" class="block text-gray-700 font-medium mb-2">Telephone</label>
             <input type="text" name="phone_number" id="phone_number" required
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
         </div>
@@ -80,12 +80,12 @@
     </form>
 
     <div class="mt-4 text-center">
-        <a href="patients.php?action=list" class="text-blue-600 hover:underline">Retour à la liste</a>
+        <a href="patients.php?action=list" class="text-blue-600 hover:underline">Retour a la liste</a>
     </div>
 </main>
 
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
-    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+    &copy; <?= date('Y') ?> Health Care. Tous droits reserves.
 </footer>
 
 </body>

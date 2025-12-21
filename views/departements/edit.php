@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier un Département</title>
+    <title>Modifier un Departement</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
@@ -19,13 +19,13 @@
 </header>
 
 <main class="container mx-auto mt-6 p-4">
-    <h2 class="text-2xl font-bold mb-6">Modifier un Département</h2>
+    <h2 class="text-2xl font-bold mb-6">Modifier un Departement</h2>
 
     <form action="departements.php?action=update" method="POST" class="bg-white shadow-md rounded-lg p-6 max-w-md mx-auto space-y-4">
         <input type="hidden" name="department_id" value="<?= htmlspecialchars($departements['department_id']) ?>">
 
         <div>
-            <label for="department_name" class="block text-gray-700 font-medium mb-2">Nom du Département</label>
+            <label for="department_name" class="block text-gray-700 font-medium mb-2">Nom du Departement</label>
             <input type="text" name="department_name" id="department_name"
                    value="<?= htmlspecialchars($departements['department_name']) ?>"
                    class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -53,7 +53,7 @@
 </main>
 
 <footer class="bg-gray-200 text-center text-gray-600 py-4 mt-6">
-    &copy; <?= date('Y') ?> Health Care. Tous droits réservés.
+    &copy; <?= date('Y') ?> Health Care. Tous droits reserves.
 </footer>
 
 </body>
