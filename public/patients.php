@@ -3,6 +3,12 @@ require_once "../config/database.php";
 require_once "../config/config.php";
 require_once "../models/patientModel.php";
 
+session_start();
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit;
+}
+
 $action = $_GET['action'] ?? 'list';
 
 switch ($action) {

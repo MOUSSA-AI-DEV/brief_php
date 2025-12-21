@@ -1,6 +1,11 @@
 <?php
 require_once "../config/database.php";
 require_once "../models/statisticsModel.php";
+session_start();
+
+if (!isset($_SESSION['id'])) {
+    header("Location: login.php");
+    exit;}
 
 $totalPatients    = countPatients($connection);
 $totalDoctors     = countDoctors($connection);
@@ -12,6 +17,8 @@ $doctorsByDept    = getDoctorsWithDepartments($connection);
 <head>
     <meta charset="UTF-8">
     <title>Health Care Dashboard</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body { font-family: Arial, sans-serif; margin:0; background:#f4f6f9; }
@@ -33,6 +40,11 @@ $doctorsByDept    = getDoctorsWithDepartments($connection);
 <body>
 <header>
     <h1>Health Care Application Dashboard</h1>
+    <a href="logout.php"
+   class="text-red-600 font-semibold hover:text-red-700 hover:underline">
+   Logout
+</a>
+
 </header>
 
 <div class="container">

@@ -1,9 +1,6 @@
 <?php
-// models/statisticsModel.php
 
-/**
- * Return total number of patients
- */
+
 function countPatients(mysqli $conn): int {
     $sql = "SELECT COUNT(*) AS total FROM patients";
     $result = mysqli_query($conn, $sql);
@@ -11,9 +8,6 @@ function countPatients(mysqli $conn): int {
     return (int)$row['total'];
 }
 
-/**
- * Return total number of doctors
- */
 function countDoctors(mysqli $conn): int {
     $sql = "SELECT COUNT(*) AS total FROM doctors";
     $result = mysqli_query($conn, $sql);
@@ -21,9 +15,7 @@ function countDoctors(mysqli $conn): int {
     return (int)$row['total'];
 }
 
-/**
- * Return total number of departments
- */
+
 function countDepartments(mysqli $conn): int {
     $sql = "SELECT COUNT(*) AS total FROM departments";
     $result = mysqli_query($conn, $sql);
@@ -31,9 +23,7 @@ function countDepartments(mysqli $conn): int {
     return (int)$row['total'];
 }
 
-/**
- * Return all doctors with their department
- */
+
 function getDoctorsWithDepartments(mysqli $conn): array {
     $sql = "
         SELECT
@@ -50,9 +40,6 @@ function getDoctorsWithDepartments(mysqli $conn): array {
     return mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
 
-/**
- * (Optional) Doctors count per department
- */
 function countDoctorsPerDepartment(mysqli $conn): array {
     $sql = "
         SELECT
